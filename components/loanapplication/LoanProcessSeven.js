@@ -135,11 +135,11 @@ const LoanProcessSeven = ({ step, setStep }) => {
       errors.receivedIPPIN = "Please select an option";
       isValid = false;
     }
-    if (!formData.ipPin) {
+    if (formData.receivedIPPIN === "Yes" && !formData.ipPin) {
       errors.ipPin = "Please provide an ip pin";
       isValid = false;
     }
-    if (formData.ipPin.length !== 6) {
+    if (formData.receivedIPPIN === "Yes" && formData.ipPin.length !== 6) {
       errors.ipPin = "IP pin must be 6 characters long";
       isValid = false;
     }
@@ -394,7 +394,7 @@ const LoanProcessSeven = ({ step, setStep }) => {
                   name="ipPin"
                   id="ipPin"
                   max={6}
-                  min={6}
+                  min="6"
                   value={formData.ipPin}
                   onChange={handleChange}
                   placeholder="Enter your IP PIN"
