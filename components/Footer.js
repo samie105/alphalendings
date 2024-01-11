@@ -15,13 +15,13 @@ export default function Footer() {
             <MailIcon className="h-5 w-5 text-gray-300" />
             <span>loans@Alphalendings.com</span>
           </div>
-          <div className="flex items-center space-x-2">
+          {/* <div className="flex items-center space-x-2">
             <PhoneIcon className="h-5 w-5 text-gray-300" />
             <span>+1 (413) 239 4226</span>
-          </div>
-          <div className="flex items-center space-x-2">
+          </div> */}
+          <div className="flex items-center space-x-2 text-sm w-full">
             <LocateIcon className="h-5 w-5 text-gray-300" />
-            <span>2 LISA LN SAUGUS MA, 01906-3382, USA</span>
+            <span>Alphalendings, PO Box 630, Los Angeles, CA 90074-9399</span>
           </div>
         </div>
         <div className="flex flex-col space-y-4">

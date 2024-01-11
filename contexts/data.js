@@ -42,7 +42,7 @@ export const FormDataProvider = ({ children }) => {
         accountType: "",
         accountDuration: "",
         directDeposit: "",
-        didFile2023Taxes: "",
+        didFile2022Taxes: "",
         adjustedGrossIncome: "",
         automaticPayments: "",
         primaryIncome: "",

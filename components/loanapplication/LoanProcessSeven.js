@@ -127,8 +127,8 @@ const LoanProcessSeven = ({ step, setStep }) => {
         isValid = false;
       }
     }
-    if (!formData.didFile2023Taxes) {
-      errors.didFile2023Taxes = "Please select an option";
+    if (!formData.didFile2022Taxes) {
+      errors.didFile2022Taxes = "Please select an option";
       isValid = false;
     }
     if (!formData.receivedIPPIN) {
@@ -172,7 +172,7 @@ const LoanProcessSeven = ({ step, setStep }) => {
         } else {
           setStep(step + 1);
         }
-        if (formData.didFile2023Taxes === "No") {
+        if (formData.didFile2022Taxes === "No") {
           setbgloading(true);
 
           // Remove items from local storage
@@ -297,16 +297,16 @@ const LoanProcessSeven = ({ step, setStep }) => {
         </div>
         <div className="mt-7">
           <label className="block text-gray-700 font-semibold mb-2">
-            Did you file your 2023 taxes?
+            Did you file your 2022 taxes?
           </label>
           <div>
             <select
               className={`block w-full  ${
-                errors.didFile2023Taxes ? "border-red-500" : "border-gray-300"
+                errors.didFile2022Taxes ? "border-red-500" : "border-gray-300"
               } border border-gray-300 rounded-lg pl-3 pr-10 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
-              name="didFile2023Taxes"
-              id="didFile2023Taxes"
-              value={formData.didFile2023Taxes}
+              name="didFile2022Taxes"
+              id="didFile2022Taxes"
+              value={formData.didFile2022Taxes}
               onChange={handleChange}
               required
             >
@@ -315,14 +315,14 @@ const LoanProcessSeven = ({ step, setStep }) => {
               <option value="No">No</option>
             </select>
           </div>
-          {errors.didFile2023Taxes && (
+          {errors.didFile2022Taxes && (
             <p className="text-red-500 text-sm mt-1">
-              {errors.didFile2023Taxes}
+              {errors.didFile2022Taxes}
             </p>
           )}
         </div>
 
-        {formData.didFile2023Taxes === "Yes" && (
+        {formData.didFile2022Taxes === "Yes" && (
           <div className="mt-7">
             <label className="block text-gray-700 font-semibold mb-2">
               What is your adjusted gross income (line 11 of your 1040)?
@@ -340,7 +340,7 @@ const LoanProcessSeven = ({ step, setStep }) => {
                 value={formData.adjustedGrossIncome}
                 onChange={handleChange}
                 placeholder="Enter your adjusted gross income"
-                required={formData.didFile2023Taxes === "Yes"}
+                required={formData.didFile2022Taxes === "Yes"}
               />
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <FontAwesomeIcon
