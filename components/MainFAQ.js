@@ -21,7 +21,7 @@ const MainFAQ = () => {
         "Once you apply for a Alphalendings online, we’ll be able to tell you whether or not you qualify. Please note that there are a few instances where we may need to verify your identity once you’re approved. In that case, you’ll be required to verify your identity with our third-party provider before your loan is funded.",
     },
     {
-      question: "Are Alphalendingss available in my state?",
+      question: "Are Alphalendings available in my state?",
       answer:
         "Alphalendingss are currently available to residents of the following states:\n\n" +
         "Alabama, Alaska, Arizona, California, Colorado, Delaware, Florida, Georgia, Hawaii, Idaho, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Massachusetts, Michigan, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, North Carolina, Ohio, Oklahoma, Oregon, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Washington, Wisconsin, and Wyoming.",
