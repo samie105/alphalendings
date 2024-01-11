@@ -17,10 +17,10 @@ export default function WhyQuick() {
           <div className="flex flex-col justify-center space-y-4 bg-white bg-opacity-10 backdrop-blur-md rounded-xl p-6 dark:bg-gray-800 dark:bg-opacity-10">
             <div className="space-y-2">
               <h2 className="text-xl pb-3 font-bold tracking-tighter text-white sm:text-3xl">
-                Why Alphalendings?
+                Why Grandlendings?
               </h2>
               <p className="max-w-[600px] text-sm text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Alphalendings is a better way to borrow extra money. It's not a
+                Grandlendings is a better way to borrow extra money. It's not a
                 payday loan. It's an installment loan, which means you pay down
                 the balance with each on-time payment. Borrow from $300 to $1500
                 - up to $800 for new and repeat borrowers, and up to $1500 for

@@ -22,14 +22,8 @@ function Navbar() {
       >
         <div className="flex items-center px-3 py-5 ">
           <nav className="flex w-full justify-between items-center">
-            <div className="LogoSide font-bold ml-5 text">
-              <Image
-                alt="Alphalendings"
-                src="/assets/GLlogo.png"
-                width={1000}
-                height={1000}
-                className="w-auto h-10"
-              />
+            <div className="LogoSide font-bold ml text-xl text">
+              Alphalendings
             </div>
             <div
               className={`burger lg:hidden xl:hidden md:hidden cursor-pointer py-2 pr-6 ${

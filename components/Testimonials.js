@@ -22,7 +22,7 @@ export default function Testimonial() {
             <span className="text-yellow-400">★★★★☆</span>
           </div>
           <p className="text-white mt-4">
-            "Alphalendings still remains one of the best out there. It took me
+            "Grandlendings still remains one of the best out there. It took me
             to greater levels."
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function Testimonial() {
             <span className="text-yellow-400">★★★★★</span>
           </div>
           <p className="text-white mt-4">
-            "Alphalendings deems more and more reliable in loan services, this
+            "Grandlendings deems more and more reliable in loan services, this
             is wholesome!!!."
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function Testimonial() {
             <span className="text-yellow-400">★★★★☆</span>
           </div>
           <p className="text-white mt-4">
-            Alphalendings is forever a bigger part of my educational life, it
+            Grandlendings is forever a bigger part of my educational life, it
             sits upfront my goto choice anytime."
           </p>
         </div>

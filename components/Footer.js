@@ -13,7 +13,7 @@ export default function Footer() {
           <h3 className="text-lg font-semibold">Contact Details</h3>
           <div className="flex items-center space-x-2">
             <MailIcon className="h-5 w-5 text-gray-300" />
-            <span>loans@Alphalendings.com</span>
+            <span>loans@grandlendings.com</span>
           </div>
           <div className="flex items-center space-x-2">
             <PhoneIcon className="h-5 w-5 text-gray-300" />
