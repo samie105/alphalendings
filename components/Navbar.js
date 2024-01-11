@@ -24,7 +24,7 @@ function Navbar() {
           <nav className="flex w-full justify-between items-center">
             <div className="LogoSide font-bold ml-5 text">
               <Image
-                alt="Grandlendings"
+                alt="Alphalendings"
                 src="/assets/GLlogo.png"
                 width={1000}
                 height={1000}

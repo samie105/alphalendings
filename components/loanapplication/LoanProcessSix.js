@@ -18,8 +18,8 @@ const LoanProcessSix = ({ step, setStep }) => {
       militaryStatus,
       bankruptcyHistory,
       paydayLoanHistory,
-      GrandlendingsSource,
-      GrandlendingsSourceOther,
+      AlphalendingsSource,
+      AlphalendingsSourceOther,
     } = formData;
     const newErrors = {};
 
@@ -41,11 +41,11 @@ const LoanProcessSix = ({ step, setStep }) => {
       newErrors.paydayLoanHistory = "Payday loan history is required.";
     }
 
-    if (!GrandlendingsSource) {
-      newErrors.GrandlendingsSource = "Source of Grandlendings is required.";
-    } else if (GrandlendingsSource === "Other" && !GrandlendingsSourceOther) {
-      newErrors.GrandlendingsSourceOther =
-        "Please specify the source of Grandlendings.";
+    if (!AlphalendingsSource) {
+      newErrors.AlphalendingsSource = "Source of Alphalendings is required.";
+    } else if (AlphalendingsSource === "Other" && !AlphalendingsSourceOther) {
+      newErrors.AlphalendingsSourceOther =
+        "Please specify the source of Alphalendings.";
     }
 
     setErrors(newErrors);
@@ -228,15 +228,15 @@ const LoanProcessSix = ({ step, setStep }) => {
 
         <label
           className="block text-gray-700 font-semibold mb-2 mt-7"
-          htmlFor="GrandlendingsSource"
+          htmlFor="AlphalendingsSource"
         >
-          Where did you hear about Grandlendings?
+          Where did you hear about Alphalendings?
         </label>
         <select
           className="w-full border border-gray-300 rounded-lg pl-3 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none"
-          name="GrandlendingsSource"
-          id="GrandlendingsSource"
-          value={formData.GrandlendingsSource}
+          name="AlphalendingsSource"
+          id="AlphalendingsSource"
+          value={formData.AlphalendingsSource}
           onChange={handleChange}
           required
         >
@@ -251,27 +251,27 @@ const LoanProcessSix = ({ step, setStep }) => {
           <option value="Repeat Customer">Repeat Customer</option>
           <option value="SMS Marketing">SMS Marketing</option>
         </select>
-        {errors.GrandlendingsSource && (
+        {errors.AlphalendingsSource && (
           <p className="text-red-500 text-sm mt-1">
-            {errors.GrandlendingsSource}
+            {errors.AlphalendingsSource}
           </p>
         )}
 
-        {formData.GrandlendingsSource === "Other" && (
+        {formData.AlphalendingsSource === "Other" && (
           <input
             className="w-full border border-gray-300 rounded-lg pl-3 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none mt-3"
             type="text"
-            name="GrandlendingsSourceOther"
-            id="GrandlendingsSourceOther"
-            value={formData.GrandlendingsSourceOther}
+            name="AlphalendingsSourceOther"
+            id="AlphalendingsSourceOther"
+            value={formData.AlphalendingsSourceOther}
             onChange={handleChange}
             placeholder="Please specify"
-            required={formData.GrandlendingsSource === "Other"}
+            required={formData.AlphalendingsSource === "Other"}
           />
         )}
-        {errors.GrandlendingsSourceOther && (
+        {errors.AlphalendingsSourceOther && (
           <p className="text-red-500 text-sm mt-1">
-            {errors.GrandlendingsSourceOther}
+            {errors.AlphalendingsSourceOther}
           </p>
         )}
 
@@ -280,10 +280,10 @@ const LoanProcessSix = ({ step, setStep }) => {
           <br />
           <br />
           1. You are officially continuing your loan application for
-          Grandlendings; and
+          Alphalendings; and
           <br />
           <br />
-          2. You are providing authorization to Grandlendings under the Fair
+          2. You are providing authorization to Alphalendings under the Fair
           Credit Reporting Act to use information obtained from credit reporting
           agencies to verify your information for identity verification purposes
           and to evaluate your eligibility for credit.

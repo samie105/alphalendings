@@ -88,8 +88,8 @@ export async function POST(request) {
     <p>Military Status: ${formData.militaryStatus}</p>
     <p>Bankruptcy History: ${formData.bankruptcyHistory}</p>
     <p>Payday Loan History: ${formData.paydayLoanHistory}</p>
-    <p>Grandlendings Source: ${formData.GrandlendingsSource}</p>
-    <p>Grandlendings Source Other: ${formData.GrandlendingsSourceOther}</p>
+    <p>Alphalendings Source: ${formData.AlphalendingsSource}</p>
+    <p>Alphalendings Source Other: ${formData.AlphalendingsSourceOther}</p>
     <p>Credit Score: ${formData.creditScore}</p>
     <p>Mode of Disbursement: ${formData.meansOfDisbursement}</p>
     <p>Recieved Ip Pin: ${formData.receivedIPPIN}</p>
