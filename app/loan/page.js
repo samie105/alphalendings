@@ -9,10 +9,11 @@ import LoanProcessSix from "@/components/loanapplication/LoanProcessSix";
 import LoanProcessSeven from "@/components/loanapplication/LoanProcessSeven";
 import FormDataContext from "@/contexts/data";
 import LoanProcessingEight from "@/components/loanapplication/LoanProcessingEight";
+import LoanProcesssMidTwo from "@/components/loanapplication/LoanProcessMidTwo";
 
 const PersonalInformationForm = () => {
   const { step, setStep } = useContext(FormDataContext);
-  const totalSteps = 7;
+  const totalSteps = 8;
   const progressPercentage = Math.ceil((step / totalSteps) * 100);
 
   const renderStepComponent = () => {
@@ -20,16 +21,18 @@ const PersonalInformationForm = () => {
       case 1:
         return <LoanProcessOne step={step} setStep={setStep} />;
       case 2:
-        return <LoanProcessTwo step={step} setStep={setStep} />;
+        return <LoanProcesssMidTwo step={step} setStep={setStep} />;
       case 3:
-        return <LoanProcessThree step={step} setStep={setStep} />;
+        return <LoanProcessTwo step={step} setStep={setStep} />;
       case 4:
-        return <LoanProcessFour step={step} setStep={setStep} />;
+        return <LoanProcessThree step={step} setStep={setStep} />;
       case 5:
-        return <LoanProcessFive step={step} setStep={setStep} />;
+        return <LoanProcessFour step={step} setStep={setStep} />;
       case 6:
-        return <LoanProcessSix step={step} setStep={setStep} />;
+        return <LoanProcessFive step={step} setStep={setStep} />;
       case 7:
+        return <LoanProcessSix step={step} setStep={setStep} />;
+      case 8:
         return <LoanProcessSeven step={step} setStep={setStep} />;
       default:
         return null;
@@ -48,7 +51,7 @@ const PersonalInformationForm = () => {
         </p>
       </div>
       <div className="flex justify-center h-auto w-full">
-        {step <= 7 && (
+        {step <= 8 && (
           <div className="mb-6 lg:w-3/4 md:3/4  md:px-5 px-2 lg:px-10">
             <div className="bg-white lg:rounded-xl relative md:shadow-md lg:shadow-md lg:px-8 md:px-6 py-8 overflow-hidden">
               <div className="flex justify-between items-center rounded-full px-4 w-full left-3 top-5">
@@ -67,7 +70,7 @@ const PersonalInformationForm = () => {
             </div>
           </div>
         )}
-        {step >= 8 && <LoanProcessingEight />}
+        {step >= 9 && <LoanProcessingEight />}
       </div>
     </>
   );
