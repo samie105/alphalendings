@@ -215,8 +215,8 @@ const LoanProcessTwo = ({ step, setStep }) => {
           required
         >
           <option value="">Choose an option</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
+          <option value="A month">A month</option>
+          <option value="2 Months">2 Months</option>
         </select>
         {errors.rentalAssistanceDuration && (
           <p className="text-red-500">{errors.rentalAssistanceDuration}</p>

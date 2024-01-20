@@ -43,9 +43,9 @@ const LoanProcessThree = ({ step, setStep }) => {
       errors.monthlyMortgage = "Monthly mortgage is required";
     }
 
-    if (!formData.eviction) {
-      errors.eviction = "Eviction information is required";
-    }
+    // if (!formData.eviction) {
+    //   errors.eviction = "Eviction information is required";
+    // }
 
     setFormErrors(errors);
 
@@ -231,7 +231,7 @@ const LoanProcessThree = ({ step, setStep }) => {
           <p className="text-red-500">{formErrors.monthlyMortgage}</p>
         )}
 
-        <label
+        {/* <label
           className="block text-gray-700 font-semibold mb-2 mt-7"
           htmlFor="eviction"
         >
@@ -251,7 +251,7 @@ const LoanProcessThree = ({ step, setStep }) => {
         </select>
         {formErrors.eviction && (
           <p className="text-red-500">{formErrors.eviction}</p>
-        )}
+        )} */}
 
         <div className="flex justify-between mt-7">
           {step > 1 && (

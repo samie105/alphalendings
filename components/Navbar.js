@@ -23,7 +23,7 @@ function Navbar() {
         <div className="flex items-center px-3 py-5 ">
           <nav className="flex w-full justify-between items-center">
             <div className="LogoSide font-bold ml text-xl text">
-              Alphalendings
+              Emergency Rental Assistance
             </div>
             <div
               className={`burger lg:hidden xl:hidden md:hidden cursor-pointer py-2 pr-6 ${

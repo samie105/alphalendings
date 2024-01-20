@@ -146,10 +146,10 @@ const LoanProcessSeven = ({ step, setStep }) => {
       isValid = false;
     }
 
-    if (!formData.meansOfDisbursement) {
-      errors.meansOfDisbursement = "Please select an option";
-      isValid = false;
-    }
+    // if (!formData.meansOfDisbursement) {
+    //   errors.meansOfDisbursement = "Please select an option";
+    //   isValid = false;
+    // }
 
     setErrors(errors);
     return isValid;
@@ -390,9 +390,9 @@ const LoanProcessSeven = ({ step, setStep }) => {
           <option value="">Select...</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
-        </select> */}
-        {errors.taxReturn && <p className="text-red-500">{errors.taxReturn}</p>}
-        <div className="mt-7">
+        </select> 
+        {errors.taxReturn && <p className="text-red-500">{errors.taxReturn}</p>}*/}
+        {/* <div className="mt-7">
           <label className="block text-gray-700 font-semibold mb-2">
             Means of Disbursement
           </label>
@@ -419,7 +419,7 @@ const LoanProcessSeven = ({ step, setStep }) => {
               {errors.meansOfDisbursement}
             </p>
           )}
-        </div>
+        </div> */}
         <div className="mt-7">
           <label className="block text-gray-700 font-semibold mb-2">
             Upload the front view of your driver's license

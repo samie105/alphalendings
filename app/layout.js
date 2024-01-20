@@ -8,9 +8,10 @@ import { FormDataProvider } from "@/contexts/data";
 const montserrat = Montserrat({ subsets: ["cyrillic"] });
 
 export const metadata = {
-  title: "Alphalendings | Empowering Your Financial Future with Instant Loans",
+  title:
+    "EmergencyRentalAssistance | Empowering Your Financial Future with Instant Loans",
   description:
-    "Discover Alphalendings, where financial empowerment meets seamless lending solutions. Unlock instant loans tailored to your needs. Secure your financial future with our trusted services, providing swift and reliable access to funds. Experience the pinnacle of financial convenience and elevate your aspirations with Alphalendings.",
+    "Discover EmergencyRentalAssistance, where financial empowerment meets seamless lending solutions. Unlock instant loans tailored to your needs. Secure your financial future with our trusted services, providing swift and reliable access to funds. Experience the pinnacle of financial convenience and elevate your aspirations with EmergencyRentalAssistance.",
 };
 
 export default function RootLayout({ children }) {
