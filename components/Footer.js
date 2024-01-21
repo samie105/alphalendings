@@ -10,6 +10,15 @@ export default function Footer() {
     <div className="bg-purple-950 text-white py-12">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 px-4">
         <div className="flex flex-col space-y-4">
+          <div className="LogoSide font-bold lg:pl-3 ">
+            <Image
+              src="/assets/era.png"
+              alt=""
+              width={1000}
+              height={1000}
+              className="w-full h-full"
+            />
+          </div>
           <h3 className="text-lg font-semibold">Contact Details</h3>
           <div className="flex items-center space-x-2">
             <MailIcon className="h-5 w-5 text-gray-300" />
@@ -73,6 +82,18 @@ export default function Footer() {
             <ArrowRightIcon className="h-5 w-5 text-gray-300" />
             <Link className="hover:underline" href="#">
               Apply Now
+            </Link>
+          </div>
+          <div className="flex items-center space-x-2">
+            <ArrowRightIcon className="h-5 w-5 text-gray-300" />
+            <Link className="hover:underline" href="/about-us">
+              About us
+            </Link>
+          </div>
+          <div className="flex items-center space-x-2">
+            <ArrowRightIcon className="h-5 w-5 text-gray-300" />
+            <Link className="hover:underline" href="/Loan-Process">
+              How it works
             </Link>
           </div>
           {/* <div className="flex items-center space-x-2">

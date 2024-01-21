@@ -16,14 +16,20 @@ function Navbar() {
   return (
     <>
       <header
-        className={`holder transition-all  overflow-hidden items-center bg-white /text-white ${
+        className={`holder transition-all  overflow-hidden items-center bg-purple-800 text-white ${
           isMobileMenuOpen ? "h-auto transition-all" : "transition"
         }`}
       >
         <div className="flex items-center px-3 py-5 ">
           <nav className="flex w-full justify-between items-center">
-            <div className="LogoSide font-bold ml text-xl text">
-              Emergency Rental Assistance
+            <div className="LogoSide font-bold lg:pl-3 ">
+              <Image
+                src="/assets/era.png"
+                alt=""
+                width={1000}
+                height={1000}
+                className="w-full h-12"
+              />
             </div>
             <div
               className={`burger lg:hidden xl:hidden md:hidden cursor-pointer py-2 pr-6 ${
