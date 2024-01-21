@@ -28,7 +28,7 @@ const MainFAQ = () => {
     {
       question: "4. Can I check the status of my application?",
       answer:
-        "Yes, you can check the status of your application by contacting our support team for assistance: support@Emergencyrentalassistance.com.",
+        "Yes, you can check the status of your application by contacting our support team for assistance: support@emergencyrentals.us.",
     },
     {
       question: "5. Is there a minimum income requirement for eligibility?",

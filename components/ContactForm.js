@@ -100,10 +100,10 @@ const ContactForm = () => {
                 className="mr-2 text-blue-500"
               />
               <a
-                href="mailto:loans@EmergencyRentalAssistance.com"
+                href="mailto:loans@emergencyrentals.us"
                 className="text-blue-500 px-3"
               >
-                loans@EmergencyRentalAssistance.com
+                loans@emergencyrentals.us
               </a>
             </div>
           </div>

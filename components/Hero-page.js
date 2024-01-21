@@ -65,7 +65,6 @@ export default function HeroPage() {
     if (formData.loanAmount) {
       // Submit the loan application
       setFormError(false);
-      console.log("Loan application submitted!");
 
       // Redirect to "/loan" page
 

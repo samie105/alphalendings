@@ -31,7 +31,7 @@ export async function POST(request) {
   });
 
   // const autoReplyMessage = {
-  //   from: "no-reply <noreply@EmergencyRentalAssistance.com>",
+  //   from: "no-reply <noreply@emergencyrentals.us>",
   //   to: formData.emailAddress,
   //   subject: "Loan Application Received",
   //   html: `

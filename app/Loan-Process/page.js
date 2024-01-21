@@ -42,7 +42,7 @@ export default function LoanProcess() {
                 src="/assets/loanproc.jpg"
                 width={1000}
                 height={1000}
-                alt="Successful loan application merry moment"
+                alt="Successful application merry moment"
                 className="w-full"
               />
             </div>

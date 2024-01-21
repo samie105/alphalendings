@@ -17,8 +17,8 @@ export default function DeniedLoans() {
             Loan Application Denied
           </h2>
           <p className="my-5 text-center text-sm text-gray-600">
-            Unfortunately, we cannot process your loan application. We encourage
-            you to reapply next year or contact our support team for further
+            Unfortunately, we cannot process your application. We encourage you
+            to reapply next year or contact our support team for further
             assistance.
           </p>
         </div>
