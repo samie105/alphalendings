@@ -45,7 +45,7 @@ export default function FAQ() {
 
   return (
     <div className="mt-14 ">
-      <div className="faq-container bg-purple-800   py-5 px-4 sm:px-8 md:px-16 lg:px-24">
+      <div className="faq-container bg-gray-100   py-5 px-4 sm:px-8 md:px-16 lg:px-24">
         {faqData.map((item, index) => (
           <Collapsible
             key={index}
