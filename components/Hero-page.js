@@ -100,9 +100,7 @@ export default function HeroPage() {
                   <section className="loaninput-section  w-full flex-grow h-full justify-center flex">
                     <section>
                       <div className="loan-header capitalize text-center">
-                        <p className="lg:text-xl md:text-lg sm:text-lg pb-4 font-bold lg:hidden">
-                          Let's Customize Your Loan
-                        </p>
+                        <p className="lg:text-xl md:text-lg sm:text-lg pb-4 font-bold lg:hidden"></p>
                       </div>
                       <div className="flex flex-col ">
                         <div className="itemm">

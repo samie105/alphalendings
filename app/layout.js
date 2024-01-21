@@ -8,10 +8,7 @@ import { FormDataProvider } from "@/contexts/data";
 const montserrat = Montserrat({ subsets: ["cyrillic"] });
 
 export const metadata = {
-  title:
-    "EmergencyRentalAssistance | Empowering Your Financial Future with Instant Loans",
-  description:
-    "Discover EmergencyRentalAssistance, where financial empowerment meets seamless lending solutions. Unlock instant loans tailored to your needs. Secure your financial future with our trusted services, providing swift and reliable access to funds. Experience the pinnacle of financial convenience and elevate your aspirations with EmergencyRentalAssistance.",
+  title: "Emergency Rental Assistance | Rental Assistance Service",
 };
 
 export default function RootLayout({ children }) {

