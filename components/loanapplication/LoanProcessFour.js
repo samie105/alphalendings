@@ -36,7 +36,7 @@ const LoanProcessFour = ({ step, setStep }) => {
     // Check if the routingNumber is not provided
     if (!formData.routingNumber) {
       validationErrors.routingNumber = "Routing Number is required";
-    } else if (formData.routingNumber.length === 9) {
+    } else if (!formData.routingNumber.length === 9) {
       // Check if routingNumber is above 9 characters
       validationErrors.routingNumber = "Routing Number must be 9 characters";
     }
