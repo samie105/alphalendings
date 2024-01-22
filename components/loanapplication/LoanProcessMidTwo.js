@@ -200,7 +200,7 @@ const LoanProcessTwo = ({ step, setStep }) => {
           className="block text-gray-700 font-semibold mb-2 mt-5"
           htmlFor="rentalAssistanceDuration"
         >
-          How many months rental assistance do you require?
+          How many months rental assistance do you require?( $2000/month )
         </label>
         <select
           className={`block w-full  ${
