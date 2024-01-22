@@ -12,7 +12,7 @@ const MainFAQ = () => {
     {
       question: "1. What is the average approval time for rental assistance?",
       answer:
-        "The approval process typically takes between 3 to 9 weeks from the time of application.",
+        "The approval process typically takes between 4 to 9 weeks from the time of application.",
     },
     {
       question: "2. How can I apply for rental assistance?",
@@ -44,7 +44,7 @@ const MainFAQ = () => {
       question:
         "7. Are there specific eligibility criteria for rental assistance?",
       answer:
-        "Yes, you require a valid email, a vaild phone contact and a government issued means of identification.",
+        "Yes, you require a valid email, a vaild phone contact and a government issued means of identification. Also you must have paid rent during the covid 19 pandemic",
     },
     {
       question: "8. Can I apply for rental assistance if I'm facing eviction?",

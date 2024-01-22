@@ -121,7 +121,8 @@ export default function LoanProcess() {
                   <CreditCardIcon className="h-12 w-12  dark:text-gray-50" />
                   <h3 className="text-lg font-semibold">Identification</h3>
                   <p className="text-sm text-center text-gray-500 dark:text-gray-400">
-                    You must have a valid government-issued identification.
+                    You must have a valid government-issued identification and
+                    must have paid rent during the covid 19 pandemic
                   </p>
                 </CardContent>
               </Card>

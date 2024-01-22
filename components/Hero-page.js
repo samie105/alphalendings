@@ -114,14 +114,9 @@ export default function HeroPage() {
                               onChange={handleLoanAmountChange}
                               className="w-64 px-4 py-2 border text-xs h-11 overflow-scroll lg:text-sm md:text-sm sm:text-sm font-semibold border-gray-300 rounded-lg"
                             >
-                              {Array.from(
-                                { length: 10 },
-                                (_, i) => (i + 1) * 500
-                              ).map((amount) => (
-                                <option key={amount} value={amount}>
-                                  {formatAmount(amount)}
-                                </option>
-                              ))}
+                              <option value="choose">Select an amount</option>
+                              <option value="2000">{formatAmount(2000)}</option>
+                              <option value="4000">{formatAmount(4000)}</option>
                             </select>
                           </div>
 

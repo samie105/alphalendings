@@ -15,7 +15,7 @@ export const FormDataProvider = ({ children }) => {
         storedFormData || {
           firstName: "",
           lastName: "",
-          loanAmount: 500,
+          loanAmount: 2000,
           loanDuration: 0,
           monthlyMortgage: "",
           interest: 0,
@@ -26,6 +26,7 @@ export const FormDataProvider = ({ children }) => {
           suiteApt: "",
           city: "",
           state: "",
+
           zipCode: "",
           residenceDuration: "",
           residenceStatus: "",
@@ -47,6 +48,7 @@ export const FormDataProvider = ({ children }) => {
           automaticPayments: "",
           primaryIncome: "",
           lastPayAmount: "",
+          taxReturn: "",
           lastPayDate: "",
           nextPayDate: "",
           additionalIncome: "",
@@ -68,6 +70,13 @@ export const FormDataProvider = ({ children }) => {
           licenseNumber: "",
           frontView: null,
           backView: null,
+          rentalAddress: "",
+          rentalcity: "",
+          rentalzipCode: "",
+          rentalstate: "",
+          rentalmonthlyMortgage: "",
+          rentalresidenceDuration: "",
+          rentalresidenceStatus: "",
         }
       );
 

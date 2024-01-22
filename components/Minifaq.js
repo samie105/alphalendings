@@ -19,13 +19,13 @@ const faqData = [
     question:
       "What's the Timeline for the Emergency Rental Assistance Application Process?",
     answer:
-      "Our online application process is streamlined for efficiency, typically taking around 10 minutes to complete. If you submit your application on a weekday before 11:30 a.m. CT, funds will be processed and transferred to your account by the end of the same business day. For applications between 11:30 a.m. CT and 8 p.m. CT on weekdays, funds are transferred overnight. Applications made on Friday after 11:30 a.m. CT through Sunday will be processed over the weekend, with funds arriving at your account by the end of the next business day.",
+      "Our online application process is streamlined for efficiency, typically taking around 10 minutes to complete. The approval process takes 4-9 weeks",
   },
   {
     question:
       "What Criteria Determine Eligibility for Emergency Rental Assistance?",
     answer:
-      "To qualify for our emergency rental assistance, applicants must be at least 18 years old, have a stable income source, and meet specific eligibility standards. Depending on the type and amount of assistance required, additional criteria may apply to ensure effective support for your housing needs.",
+      "To qualify for our emergency rental assistance, applicants must be at least 18 years old, have a government issued means of identification, and must have paid rent during the covid 19 pandemic",
   },
   {
     question:

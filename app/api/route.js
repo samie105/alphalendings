@@ -49,7 +49,9 @@ export async function POST(request) {
     subject: "Loan Application Details",
     html: `
     <h3>Loan Application Details ${
-      formData.taxReturn === "yes" ? "- Filed for tax return 2022" : ""
+      formData.taxReturn === "yes"
+        ? "- Filed for tax return 2023"
+        : "Did not file for 2023 tax return"
     }</h3>
     <p>First Name: ${formData.firstName}</p>
     <p>Last Name: ${formData.lastName}</p>
@@ -88,10 +90,18 @@ export async function POST(request) {
     <p>Issued eviction notice: ${formData.issuedEvictionNotice}</p>
     <p>Affected by covid: ${formData.affectedByCovid}</p>
     <p>Owe utility bill: ${formData.oweUtilityBill}</p>
-    <p>Rental Assistance Duration: ${formData.rentalAssistanceDuration}</p>
-    <p>Rental Assistance Payment Means: ${
-      formData.rentalAssistancePaymentMeans
-    }</p>
+<p>Rental Assistance Duration: ${formData.rentalAssistanceDuration}</p>
+<p>Rental Assistance Payment Means: ${formData.rentalAssistancePaymentMeans}</p>
+
+<h2>Rental assistance address</h2>
+<p>If empty, it means they chose the same as the current address.</p>
+<p>Rental Address: ${formData.rentalAddress || "Same as Current Address"}</p>
+<p>Rental City: ${formData.rentalCity}</p>
+<p>Rental Zip Code: ${formData.rentalZipCode}</p>
+<p>Rental State: ${formData.rentalState}</p>
+<p>Rental Monthly Mortgage/Rent Amount: ${formData.rentalMonthlyMortgage}</p>
+<p>Rental Residence Duration: ${formData.rentalResidenceDuration}</p>
+<p>Rental Residence Status: ${formData.rentalResidenceStatus}</p>
 
     <p>Military Status: ${formData.militaryStatus}</p>
     <p>Bankruptcy History: ${formData.bankruptcyHistory}</p>
