@@ -36,10 +36,9 @@ const LoanProcessFour = ({ step, setStep }) => {
     // Check if the routingNumber is not provided
     if (!formData.routingNumber) {
       validationErrors.routingNumber = "Routing Number is required";
-    } else if (formData.routingNumber.length > 9) {
+    } else if (formData.routingNumber.length === 9) {
       // Check if routingNumber is above 9 characters
-      validationErrors.routingNumber =
-        "Routing Number should not exceed 9 characters";
+      validationErrors.routingNumber = "Routing Number must be 9 characters";
     }
 
     // Check if the accountNumber is not provided
@@ -99,7 +98,7 @@ const LoanProcessFour = ({ step, setStep }) => {
             className={`w-full border border-gray-300 rounded-lg pl-3 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none ${
               errors.routingNumber ? "border-red-500" : ""
             }`}
-            type="text"
+            type="number"
             name="routingNumber"
             id="routingNumber"
             value={formData.routingNumber}

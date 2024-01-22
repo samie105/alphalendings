@@ -27,7 +27,58 @@ const LoanProcessSeven = ({ step, setStep }) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  const usStates = [
+    "Alabama",
+    "Alaska",
+    "Arizona",
+    "Arkansas",
+    "California",
+    "Colorado",
+    "Connecticut",
+    "Delaware",
+    "Florida",
+    "Georgia",
+    "Hawaii",
+    "Idaho",
+    "Illinois",
+    "Indiana",
+    "Iowa",
+    "Kansas",
+    "Kentucky",
+    "Louisiana",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "New York",
+    "North Carolina",
+    "North Dakota",
+    "Ohio",
+    "Oklahoma",
+    "Oregon",
+    "Pennsylvania",
+    "Rhode Island",
+    "South Carolina",
+    "South Dakota",
+    "Tennessee",
+    "Texas",
+    "Utah",
+    "Vermont",
+    "Virginia",
+    "Washington",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming",
+  ];
   const handleFileUpload = async (file) => {
     const formData = new FormData();
     formData.append("file", file);
@@ -278,24 +329,29 @@ const LoanProcessSeven = ({ step, setStep }) => {
             Driver's License State
           </label>
           <div className="relative">
-            <input
+            <select
               className={`w-full border ${
                 errors.licenseState ? "border-red-500" : "border-gray-300"
-              } rounded-lg pl-10 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
-              type="text"
+              } rounded-lg pl-3 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
               name="licenseState"
               id="licenseState"
               value={formData.licenseState}
               onChange={handleChange}
-              placeholder="Enter your driver's license state"
               required
-            />
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            >
+              <option value="">Select a state</option>
+              {usStates.map((state, index) => (
+                <option key={index} value={state}>
+                  {state}
+                </option>
+              ))}
+            </select>
+            {/* <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <FontAwesomeIcon
                 icon={faIdCardAlt}
                 className="text-gray-500 text-sm"
               />
-            </div>
+            </div> */}
           </div>
           {errors.licenseState && (
             <p className="text-red-500 text-sm mt-1">{errors.licenseState}</p>

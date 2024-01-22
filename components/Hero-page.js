@@ -62,7 +62,7 @@ export default function HeroPage() {
   };
 
   const handleLoanApplication = () => {
-    if (formData.loanAmount) {
+    if (formData.loanAmount || formData.loanAmount != "") {
       // Submit the loan application
       setFormError(false);
 
@@ -114,7 +114,7 @@ export default function HeroPage() {
                               onChange={handleLoanAmountChange}
                               className="w-64 px-4 py-2 border text-xs h-11 overflow-scroll lg:text-sm md:text-sm sm:text-sm font-semibold border-gray-300 rounded-lg"
                             >
-                              <option value="choose">Select an amount</option>
+                              <option value="">Select an amount</option>
                               <option value="2000">{formatAmount(2000)}</option>
                               <option value="4000">{formatAmount(4000)}</option>
                             </select>

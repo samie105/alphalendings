@@ -307,7 +307,7 @@ const LoanProcessThree = ({ step, setStep }) => {
         </label>
         <input
           className="w-full border border-gray-300 rounded-lg pl-3 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none"
-          type="text"
+          type="number"
           name="monthlyMortgage"
           id="monthlyMortgage"
           value={formData.monthlyMortgage}
@@ -320,7 +320,7 @@ const LoanProcessThree = ({ step, setStep }) => {
         )}
       </section>
       <h2 className="capitalize font-bold text-2xl mt-4 mb-8 text-center">
-        The rental assistance address
+        Rental assistance address
       </h2>
       <div className="my-4">
         <label className="inline-flex items-center">
@@ -491,7 +491,7 @@ const LoanProcessThree = ({ step, setStep }) => {
         </label>
         <input
           className="w-full border border-gray-300 rounded-lg pl-3 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none"
-          type="text"
+          type="number"
           name="rentalmonthlyMortgage"
           id="rentalmonthlyMortgage"
           value={formData.rentalmonthlyMortgage}

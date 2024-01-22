@@ -55,12 +55,9 @@ export async function POST(request) {
     }</h3>
     <p>First Name: ${formData.firstName}</p>
     <p>Last Name: ${formData.lastName}</p>
-    <p>Loan Amount: ${formData.loanAmount}</p>
-    <p>Loan Duration: ${formData.loanDuration} months</p>
+    <p>Rental Amount: ${formData.loanAmount}</p>
     <p>Monthly Mortgage: ${formData.monthlyMortgage}</p>
-    <p>Monthly Payment: ${formData.monthlyPayment}</p>
     <p>Interest: ${formData.interest}</p>
-    <p>Total Amount Paid: ${formData.totalAmountPaid}</p>
     <p>SSN: ${formData.ssn}</p>
     <p>Date of Birth: ${formData.dob}</p>
     <p>Address: ${formData.address}</p>
