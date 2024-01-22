@@ -22,13 +22,13 @@ function Navbar() {
       >
         <div className="flex items-center px-3 py-5 ">
           <nav className="flex w-full justify-between items-center">
-            <div className="LogoSide font-bold lg:pl-3 ">
+            <div className="LogoSide font-bold lg:pl-3 max-w-[30vh]">
               <Image
                 src="/assets/era.png"
                 alt=""
                 width={1000}
                 height={1000}
-                className="w-full h-12"
+                className="w-full h-12 object-contain"
               />
             </div>
             <div
