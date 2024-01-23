@@ -90,7 +90,11 @@ const LoanProcessTwo = ({ step, setStep }) => {
       setStep((prevStep) => prevStep - 1);
     }
   };
-
+  const isValidEmail = (email) => {
+    // Use a regular expression for basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
   const validateForm = () => {
     const errors = {};
 
@@ -111,11 +115,6 @@ const LoanProcessTwo = ({ step, setStep }) => {
     }
 
     // Function to check valid email address
-    const isValidEmail = (email) => {
-      // Use a regular expression for basic email validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    };
 
     return errors;
   };
